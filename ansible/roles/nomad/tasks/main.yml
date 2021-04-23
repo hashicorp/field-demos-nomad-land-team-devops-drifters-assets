@@ -81,8 +81,8 @@
     # Ubuntu: symlinked to here when enabled /etc/systemd/system/multi-user.target.wants/
   template:
     src: init.service.j2
-    dest: /lib/systemd/system/nomad.service
-    # dest: /etc/systemd/system/nomad.service
+    # dest: /lib/systemd/system/nomad.service # Repot
+    dest: /etc/systemd/system/nomad.service # Roger
     # owner: root
     # group: root
   notify: systemd_reload
