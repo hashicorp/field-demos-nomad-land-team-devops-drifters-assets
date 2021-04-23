@@ -124,6 +124,16 @@
     - nomad
   when: "'client' in inventory_hostname"
 
+- name: Insert Vault token into nomad vault integration agent config.
+  replace:
+    path: /etc/nomad.d/server_vault.hcl #"{{ item.path }}"
+    regexp: "REPLACETOKEN"
+    replace: "{{ lookup('file', '/tmp/rootKey/{{inventory_hostname}}/rootkey')}}"
+  # with_items: "{{ nomad_jobs.files }}"
+  run_once: true
+  tags:
+    - nomad
+    - instruqt
 
 - name: Replace CHANGENIC with user specified NIC
   replace:
