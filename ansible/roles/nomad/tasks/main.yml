@@ -100,7 +100,9 @@
   loop:
     - nomad
     - server
+    - server_vault
     - client
+    - client_vault
   notify: nomad_restart
   tags:
     - nomad
@@ -116,6 +118,7 @@
   loop:
     - nomad
     - client
+    - client_vault
   notify: nomad_restart
   tags:
     - nomad
