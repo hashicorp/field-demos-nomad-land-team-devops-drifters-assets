@@ -150,6 +150,8 @@
     name: nomad
     state: restarted
     enabled: yes
+  environment:
+    VAULT_TOKEN: "{{ lookup('file', '/tmp/rootKey/{{vault_server}}/rootkey')}}"
   tags:
     - nomad
 
