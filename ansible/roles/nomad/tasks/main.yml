@@ -81,14 +81,13 @@
     # Ubuntu: symlinked to here when enabled /etc/systemd/system/multi-user.target.wants/
   template:
     src: init.service.j2
-    # dest: /lib/systemd/system/nomad.service # Repot
+    # dest: /lib/systemd/system/nomad.service # Repo
     dest: /etc/systemd/system/nomad.service # Roger
     # owner: root
     # group: root
   notify: systemd_reload
   tags:
     - nomad
-    - home
 
 - name: Create config files - Server
   throttle: 1

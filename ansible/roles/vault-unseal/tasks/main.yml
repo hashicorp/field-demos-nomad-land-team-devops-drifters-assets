@@ -68,6 +68,16 @@
       #vault write transform/encode/payments value=1111-2222-3333-4444 > /tmp/transform-clear.txt
       #vault write transform/encode/payments -format=json value=1111-2222-3333-4444 > /tmp/transform-clear.txt
       #vault write transform/decode/payments value=$(jq -r .data.encoded_value /tmp/transform-clear.txt)
+      cat <<EOF > /tmp/transform_vault.hcl
+      path "transform/encode/payments" {
+        capabilities = [ "read", "update" ]
+      }
+      path "transform/decode/payments" {
+        capabilities = [ "read", "update" ]
+      }
+      EOF
+
+      vault policy write transform /tmp/transform_vault.hcl
     mode: 0777
   # notify: dnsmasq_restart
   tags:
