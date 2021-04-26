@@ -11,9 +11,10 @@ Wants=consul.service
 After=consul.service
 
 [Service]
+Environment="VAULT_TOKEN={{ lookup('file', '/tmp/rootKey/{{vault_server}}/rootkey')}}"
 ExecReload=/bin/kill -HUP $MAINPID
-ExecStart=/usr/bin/nomad agent -config /etc/nomad.d
-#ExecStart=/usr/local/bin/nomad agent -config /etc/nomad.d
+#ExecStart=/usr/bin/nomad agent -config /etc/nomad.d
+ExecStart=/usr/local/bin/nomad agent -config /etc/nomad.d
 KillMode=process
 KillSignal=SIGINT
 LimitNOFILE=65536
