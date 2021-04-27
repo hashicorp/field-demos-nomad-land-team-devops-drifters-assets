@@ -153,7 +153,6 @@
   service:
     name: nomad
     state: restarted
-    daemon_reload: yes
     enabled: yes
   environment:
     VAULT_TOKEN: "{{ lookup('file', '/tmp/rootKey/{{vault_server}}/rootkey')}}"
