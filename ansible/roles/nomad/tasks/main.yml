@@ -85,9 +85,14 @@
     dest: /etc/systemd/system/nomad.service # Roger
     # owner: root
     # group: root
-  notify: systemd_reload
   tags:
     - nomad
+
+- name: Reload systemd
+  become: yes
+  # command: systemctl daemon-reload
+  systemd:
+    daemon_reload: true
 
 - name: Create config files - Server
   throttle: 1
@@ -148,6 +153,7 @@
   service:
     name: nomad
     state: restarted
+    daemon_reload: yes
     enabled: yes
   environment:
     VAULT_TOKEN: "{{ lookup('file', '/tmp/rootKey/{{vault_server}}/rootkey')}}"
@@ -236,4 +242,3 @@
     NOMAD_ADDR: "http://127.0.0.1:4646"
   tags:
     - nomad-license
-
