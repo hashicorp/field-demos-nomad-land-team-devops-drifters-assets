@@ -233,7 +233,11 @@
 - name: Nomad - DAS - Start prometheus and auto-scaler
   shell: |
     cd /root/nomad_jobs/hashicups
-    sleep 30
+    until nomad server members
+    do
+    echo "nomad cluster not elected"
+    sleep 3
+    done
     nomad job run as-das-autoscaler.nomad
     nomad job run as-prometheus.nomad
   run_once: true
