@@ -233,6 +233,7 @@
 - name: Nomad - DAS - Start prometheus and auto-scaler
   shell: |
     cd /root/nomad_jobs/hashicups
+    sleep 30
     nomad job run as-das-autoscaler.nomad
     nomad job run as-prometheus.nomad
   run_once: true
