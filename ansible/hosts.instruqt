@@ -25,7 +25,7 @@ server-b-1
 region_letter=b
 
 [hashi_instruqt:vars]
-cloud_resolver=10.64.0.254
+cloud_resolver=10.64.1.254
 os_interface=ens4
 prefix=server
 user=root
