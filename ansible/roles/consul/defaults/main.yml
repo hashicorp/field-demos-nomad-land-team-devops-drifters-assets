@@ -259,4 +259,4 @@ consul_services: []
 # enable Consul Connect
 consul_connect_enabled: false
 
-cloud_resolver: # Azure 168.63.129.16 Instruqt 10.64.0.254
+cloud_resolver: # Azure 168.63.129.16 Instruqt 10.64.1.254
