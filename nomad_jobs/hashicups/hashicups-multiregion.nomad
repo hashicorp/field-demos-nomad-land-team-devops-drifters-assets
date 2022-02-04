@@ -220,7 +220,7 @@ EOF
       mode     = "delay"
     }
 
-    # Define update strategy for the Payments API
+    # Define update strategy for the Public API
     update {
       canary  = 1
     }
@@ -416,11 +416,6 @@ EOF
       interval = "5m"
       delay    = "25s"
       mode     = "delay"
-    }
-
-    # Define update strategy for the Payments API
-    update {
-      canary  = 1
     }
 
     # Service definition to be sent to Consul with corresponding health check
