@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 ### This is now done by Linux install package
 # - name: Include user and group settings
 #   include: user_group.yml
