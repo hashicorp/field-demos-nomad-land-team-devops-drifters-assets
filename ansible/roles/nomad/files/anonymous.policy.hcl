@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 namespace "*" {
   policy       = "write"
   capabilities = ["alloc-node-exec"]

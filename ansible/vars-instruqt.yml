@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 #==> Environment Specific
 # prefix: pphan-server
 # Leaving os_interface here for notes. Should be specified in inventory vars.
