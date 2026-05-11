@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 job "hashicups" {
   # Defining which data center in which to deploy the service
   datacenters = ["West"]

@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 # For full documentation and examples, see
 #     https://www.nomadproject.io/docs/job-specification/job.html
 job "hashicorp" {

@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 namespace "*" {
   policy       = "write"
   capabilities = ["alloc-node-exec"]

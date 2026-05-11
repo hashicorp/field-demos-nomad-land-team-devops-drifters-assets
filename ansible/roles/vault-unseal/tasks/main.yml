@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 - name: Reading unseal key contents
   command: cat {{item}}
   register: unseal_keys

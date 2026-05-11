@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 # - name: Creating vault user group
 #   group: name="{{ vault_group }}"
 #   become: true

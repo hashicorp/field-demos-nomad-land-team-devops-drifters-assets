@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 #==> Configure dnsmasq. This resolves issues with docker containers not being
 #    able to resolve .consul domains.
 ####

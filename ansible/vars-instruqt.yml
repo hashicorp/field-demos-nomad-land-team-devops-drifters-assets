@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 #==> Environment Specific
 # prefix: pphan-server
 # Leaving os_interface here for notes. Should be specified in inventory vars.

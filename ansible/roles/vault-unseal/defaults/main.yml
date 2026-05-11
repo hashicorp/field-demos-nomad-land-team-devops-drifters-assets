@@ -1,2 +1,4 @@
+# Copyright IBM Corp. 2021, 2026
+
 ---
 unseal_keys_dir_output: "{{ playbook_dir }}/unsealKey"
