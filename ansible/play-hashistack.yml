@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 ---
 - hosts: hashi_instruqt_west #hashi_west
   become: yes

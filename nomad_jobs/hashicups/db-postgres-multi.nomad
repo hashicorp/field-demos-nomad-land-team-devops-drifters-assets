@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 #To Configure vault
 # vault secrets enable database
 # vault write database/config/postgresql  plugin_name=postgresql-database-plugin   connection_url="postgresql://{{username}}:{{password}}@postgres.service.consul:5432/postgres?sslmode=disable"   allowed_roles="*"     username="root"     password="rootpassword"
